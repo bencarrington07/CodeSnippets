@@ -8,3 +8,18 @@ long[] arrayConverted = Array.ConvertAll<int, long>(arr, delegate(int i){ return
 var sum = arrayConverted.Sum();
 Console.WriteLine($"{sum - arrayConverted.Max()} {sum - arrayConverted.Min()}");
 ```
+## Finding the total of tallest candles.
+
+```csharp
+public static int birthdayCakeCandles(List<int> candles)
+    {
+        var tallest = candles.Max();
+        int sum = 0;
+        foreach(var can in candles){
+            if(can == tallest){
+                sum++;
+            }
+        }
+        return sum;
+    }
+```
